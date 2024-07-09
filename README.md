@@ -1,5 +1,4 @@
-# Benchmarking Test-Time Adaptation against Distribution Shifts in Image Classification
-
+# Outlier-Aware Test-Time Adaptation with Stable Memory Replay
 ## Prerequisites
 
 To use the repository, we provide a conda environment.
