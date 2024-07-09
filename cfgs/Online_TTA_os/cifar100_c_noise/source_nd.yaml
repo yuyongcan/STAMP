@@ -1,0 +1,27 @@
+MODEL:
+  ADAPTATION: source
+  ARCH: ResNet18_100
+TEST:
+  BATCH_SIZE: 64
+CORRUPTION:
+  ID_DATASET: cifar100
+  OOD_DATASET: uniform_cifar
+  NUM_OOD_SAMPLES: 2500
+  SEVERITY:
+    - 5
+  TYPE:
+    - gaussian_noise
+    - shot_noise
+    - impulse_noise
+    - defocus_blur
+    - glass_blur
+    - motion_blur
+    - zoom_blur
+    - snow
+    - frost
+    - fog
+    - brightness
+    - contrast
+    - elastic_transform
+    - pixelate
+    - jpeg_compression

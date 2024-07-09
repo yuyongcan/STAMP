@@ -1,0 +1,36 @@
+MODEL:
+  ADAPTATION: sar
+  ARCH: ResNet18_10
+TEST:
+  BATCH_SIZE: 64
+CORRUPTION:
+  ID_DATASET: cifar10_c
+  OOD_DATASET: noise_cifar
+  SOURCE_DATASET: cifar10
+  NUM_OOD_SAMPLES: 2500
+  SEVERITY:
+    - 5
+  TYPE:
+    - gaussian_noise
+    - shot_noise
+    - impulse_noise
+    - defocus_blur
+    - glass_blur
+    - motion_blur
+    - zoom_blur
+    - snow
+    - frost
+    - fog
+    - brightness
+    - contrast
+    - elastic_transform
+    - pixelate
+    - jpeg_compression
+OPTIM:
+  METHOD: SGD
+  STEPS: 1
+  BETA: 0.9
+  LR: 1e-2
+  WD: 0.
+SAR:
+  RESET_CONSTANT: 0.05

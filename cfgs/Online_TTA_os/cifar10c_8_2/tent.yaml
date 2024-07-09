@@ -1,0 +1,33 @@
+MODEL:
+  ADAPTATION: tent
+  ARCH: ResNet18_8
+TEST:
+  BATCH_SIZE: 64
+CORRUPTION:
+  ID_DATASET: cifar8_c
+  OOD_DATASET: cifar2_c
+  NUM_OOD_SAMPLES: 2000
+  SEVERITY:
+    - 5
+  TYPE:
+    - gaussian_noise
+    - shot_noise
+    - impulse_noise
+    - defocus_blur
+    - glass_blur
+    - motion_blur
+    - zoom_blur
+    - snow
+    - frost
+    - fog
+    - brightness
+    - contrast
+    - elastic_transform
+    - pixelate
+    - jpeg_compression
+OPTIM:
+  METHOD: Adam
+  STEPS: 1
+  BETA: 0.9
+  LR: 1e-3
+  WD: 0.

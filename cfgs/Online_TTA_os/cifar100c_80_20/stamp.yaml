@@ -1,0 +1,32 @@
+MODEL:
+  ADAPTATION: stamp
+  ARCH: ResNet18_80
+TEST:
+  BATCH_SIZE: 64
+  NUM_WORKERS: 8
+CORRUPTION:
+  ID_DATASET: cifar80_c
+  OOD_DATASET: cifar20_c
+  NUM_OOD_SAMPLES: 2000
+  SEVERITY:
+    - 5
+  TYPE:
+    - gaussian_noise
+    - shot_noise
+    - impulse_noise
+    - defocus_blur
+    - glass_blur
+    - motion_blur
+    - zoom_blur
+    - snow
+    - frost
+    - fog
+    - brightness
+    - contrast
+    - elastic_transform
+    - pixelate
+    - jpeg_compression
+OPTIM:
+  LR: 0.02
+STAMP:
+  ALPHA: 0.3
