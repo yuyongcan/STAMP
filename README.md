@@ -10,13 +10,13 @@ conda activate Benchmark_TTA
 
 ## Structure of Project
 
-This project is based on a [TTA-Benchmark](https://github.com/yuyongcan/Benchmark-TTA) contains several directories. Their roles are listed as follows:
+This project is based on a [TTA-Benchmark](https://github.com/yuyongcan/Benchmark-TTA) containing several directories. Their roles are listed as follows:
 
 + ./cfgs: the config files for each dataset and algorithm are saved here.
-+ ./robustbench: a official library we used to load robust datasets and models. 
++ ./robustbench: an official library we use to load robust datasets and models. 
 + ./src/
-  + data: we load our datasets and dataloaders by code under this directories.
-  + methods: the code for implements of various TTA methods.
+  + data: we load our datasets and dataloaders by code under this directory.
+  + methods: the code for the implementation of various TTA methods.
   + models: the various models' loading process and definition rely on the code here.
   + utils: some useful tools for our projects. 
 
@@ -73,11 +73,11 @@ The dataset directory structure is as follows:
 
             |-- Tiny-ImageNet-C
 
-**For OOD datasets**, you can generating the corrupted datasets according to the instructions in the [official repository](https://github.com/yuyongcan/generating_outlier) or [robustbench](https://github.com/hendrycks/robustness).
+**For OOD datasets**, you can generate the corrupted datasets according to the instructions in this [repository](https://github.com/yuyongcan/generating_outlier) or [robustbench](https://github.com/hendrycks/robustness).
 
 - **Models**
   
-  - You can train the source model by script in ./pretrain directory.
+  - You can train the source model by script in the ./pretrain directory.
   
   - You can also download our checkpoint from [here](https://drive.google.com/drive/folders/1QQUqG4Kqw9TC-1FBX7mOak7iU488_G0w?usp=drive_link).
 
@@ -95,11 +95,11 @@ To run one of the following benchmarks, the corresponding datasets need to be do
 
 Next, specify the root folder for all datasets `_C.DATA_DIR = "./data"` in the file `conf.py`.
 
-download the ckpt of pretrained models and from [here](https://drive.google.com/drive/folders/1QQUqG4Kqw9TC-1FBX7mOak7iU488_G0w?usp=drive_link) and put it in ./ckpt
+download the checkpoints of pre-trained models from [here](https://drive.google.com/drive/folders/1QQUqG4Kqw9TC-1FBX7mOak7iU488_G0w?usp=drive_link) and put it in ./ckpt
 #### How to reproduce
-The entry file for other algorithms is **test-time-eva-baseline.sh**
+The entry file for algorithms is **test-time-eva-baseline.sh**
 
-To evaluate this methods, modify the DATASET and METHOD in test-time-eva.sh
+To evaluate these methods, modify the DATASET and METHOD in test-time-eva.sh
 
 and then
 
