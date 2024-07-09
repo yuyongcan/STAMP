@@ -12,7 +12,7 @@ conda activate Benchmark_TTA
 
 This project is based on a [TTA-Benchmark](https://github.com/yuyongcan/Benchmark-TTA) contains several directories. Their roles are listed as follows:
 
-+ ./best_cfgs: the best config files for each dataset and algorithm are saved here.
++ ./cfgs: the config files for each dataset and algorithm are saved here.
 + ./robustbench: a official library we used to load robust datasets and models. 
 + ./src/
   + data: we load our datasets and dataloaders by code under this directories.
