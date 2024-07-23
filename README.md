@@ -1,6 +1,6 @@
 # Outlier-Aware Test-Time Adaptation with Stable Memory Replay
 ## Prerequisites
-[paper](https://arxiv.org/abs/2407.15773)
+[[paper](https://arxiv.org/abs/2407.15773)]
 
 To use the repository, we provide a conda environment.
 ```bash
