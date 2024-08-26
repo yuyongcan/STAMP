@@ -191,7 +191,7 @@ class STAMP(nn.Module):
             filter_ids = torch.where(entropys < self.margin)
             x_append = x_origin[filter_ids_0][filter_ids]
             self.mem.append(x_append, output_origin.max(dim=1)[1][filter_ids_0][filter_ids])
-        return output
+        return output, -entropy(output)
 
     @torch.enable_grad()
     def adapt(self):
