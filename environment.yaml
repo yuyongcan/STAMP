@@ -106,7 +106,6 @@ dependencies:
     - markupsafe==2.1.1
     - matplotlib==3.6.3
     - matplotlib-inline==0.1.6
-    - matpotlib==0.0.1
     - miniful==0.0.6
     - mistune==2.0.5
     - munch==4.0.0
