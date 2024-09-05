@@ -5,7 +5,7 @@ To use the repository, we provide a conda environment.
 ```bash
 conda update conda
 conda env create -f environment.yaml
-conda activate Benchmark_TTA 
+conda activate stamp
 ```
 
 ## Structure of Project
