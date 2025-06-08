@@ -163,7 +163,7 @@ test_time_adaptation(){
           i=$((i + 1))
           wait_n
             CUDA_VISIBLE_DEVICES="${GPUS[i % ${NUM_GPUS}]}" python test-time-validation-os.py --cfg "cfgs/Online_TTA_os/${DATASET}/${METHOD}.yaml" --output_dir "${output_path}/${DATASET}/${METHOD}" \
-              --OPTIM_LR "$lr" --STAMP_ALPHA "$alpha" "$lamb" &
+              --OPTIM_LR "$lr" --STAMP_ALPHA "$alpha" &
         done
       done
     done
